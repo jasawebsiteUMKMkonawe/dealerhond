@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Blog & Tips Otomotif Honda | Purity Motor</title>
+    <meta name="description" content="Baca artikel terbaru seputar tips perawatan motor Honda, berita komunitas, review produk, dan info touring di blog resmi Purity Motor.">
+    <meta name="keywords" content="Tips Motor Honda, Blog Otomotif, Review Motor Matic, Perawatan Motor Injeksi, Berita Honda">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.domainanda.com/blog.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Purity Motor Honda",
+      "description": "Artikel dan tips seputar sepeda motor Honda.",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Pentingnya Service Rutin di Bengkel Resmi AHASS",
+          "image": "https://placehold.co/800x450/333/fff?text=Service+AHASS",
+          "datePublished": "2026-01-10"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Tips Merawat Motor Matic Agar Awet dan Irit",
+          "image": "https://placehold.co/300x200/333/fff?text=Tips+Matic",
+          "datePublished": "2026-01-08"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* --- 1. CSS VARIABLES --- */
+        :root {
+            --primary-red: #e60012;
+            --primary-orange: #ff6d00;
+            --gradient-honda: linear-gradient(135deg, #cc0000 0%, #ff6d00 100%);
+            --accent-black: #1a1a1a;
+            --light-bg: #f4f5f7;
+            --white: #ffffff;
+            --text-dark: #222222;
+            --text-gray: #666666;
+            --border-radius: 12px;
+            --container-width: 1240px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { color: var(--text-dark); line-height: 1.6; background-color: var(--white); overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+
+       /* --- 2. HEADER & NAVIGATION --- */
+        .top-bar {
+            background: var(--accent-black);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo-img {
+            /* CLS Optimization: Explicit height in CSS matching HTML attribute */
+            height: 40px;
+            width: 200px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 19px;
+            /* Adjust based on header height */
+            left: 0;
+            background-color: var(--white);
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            border-top: 4px solid var(--primary-red);
+            animation: slideUp 0.3s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 20px;
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 500;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #fff5f5;
+            color: var(--primary-red);
+            padding-left: 25px;
+        }
+
+        .dropbtn::after {
+            content: ' ▼';
+            font-size: 0.6em;
+            color: var(--primary-red);
+            margin-left: 4px;
+        }
+
+        .cta-nav {
+            background: var(--primary-red);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem !important;
+        }
+
+        .cta-nav:hover {
+            background: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+
+
+        /* --- 3. PAGE HEADER --- */
+        .page-header {
+            background: var(--gradient-honda);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+        }
+        .page-header h1 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; margin: 0; }
+
+        /* --- 4. BLOG LAYOUT --- */
+        .blog-layout {
+            display: flex;
+            gap: 50px;
+            padding-bottom: 80px;
+        }
+
+        /* KOLOM KIRI (MAIN CONTENT) */
+        .blog-main {
+            flex: 2.5; /* Lebar sekitar 70% */
+        }
+
+        /* Featured Post (Artikel Besar di Atas) */
+        .featured-post {
+            margin-bottom: 50px;
+        }
+        .featured-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+        .post-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .featured-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--accent-black);
+        }
+        .featured-title:hover { color: var(--primary-red); cursor: pointer; }
+        .post-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        /* List Artikel (Horizontal) */
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .blog-card-horizontal {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .blog-thumb {
+            width: 250px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0; /* Agar gambar tidak mengecil */
+        }
+        .blog-info h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--accent-black);
+        }
+        .blog-info h3:hover { color: var(--primary-red); cursor: pointer; }
+        .blog-info p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Batasi 2 baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* KOLOM KANAN (SIDEBAR) */
+        .blog-sidebar {
+            flex: 1; /* Lebar sekitar 30% */
+        }
+        
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .popular-list {
+            list-style: none;
+        }
+
+        .popular-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+
+        .pop-number {
+            background: var(--primary-red);
+            color: white;
+            font-weight: 700;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .pop-thumb {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .pop-text h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 5px;
+        }
+        .pop-text h4:hover { color: var(--primary-red); cursor: pointer; }
+
+        /* --- CTA & FOOTER --- */
+        .cta-section { background: var(--gradient-honda); color: var(--white); text-align: center; padding: 80px 20px; }
+        .btn-main { background: var(--white); color: var(--primary-red); padding: 15px 40px; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 20px; }
+        
+        footer { background: #111; color: #888; padding: 70px 0 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+        .footer-col h4 { color: white; margin-bottom: 20px; font-weight: 600; font-size: 1.1rem; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .copyright { border-top: 1px solid #333; padding-top: 20px; text-align: center; margin-top: 40px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .blog-layout { flex-direction: column; }
+            .blog-sidebar { margin-top: 40px; }
+            .blog-card-horizontal { flex-direction: column; }
+            .blog-thumb { width: 100%; height: 200px; }
+            .nav-links { display: none; }
+            .nav-container { justify-content: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            Buka Setiap Hari: 08:00 - 17:00 | Minggu & Hari Libur Tetap Buka
+        </div>
+        <nav class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Halaman Utama">
+                <img src="img/logo.webp" alt="Logo Purity Honda Dealer" class="logo-img" width="180" height="40">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Produk Kami</a>
+                    <ul class="dropdown-content">
+                        <li><a href="matic.html">Matic</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                        <li><a href="cub.html">Cub / Bebek</a></li>
+                        <li><a href="ev.html">EV / Listrik</a></li>
+                        <li><a href="bigbike.html">Big Bike</a></li>
+                    </ul>
+                </li>
+                <li><a href="pricelist.html">Daftar Harga</a></li>
+                
+                <li><a href="service.html">Layanan</a></li>
+                
+                <li><a href="blog.html">Blog</a></li>
+                
+                <li><a href="https://wa.me/6289563968080?text=Halo%20saya%20tertarik%20dengan%20motor%20Honda" class="cta-nav" target="_blank">Hubungi Sales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Blog</h1>
+        </div>
+    </section>
+
+    <div class="container blog-layout">
+        
+        <main class="blog-main">
+            
+            <article class="featured-post">
+                <img src="https://placehold.co/800x450/333/fff?text=Mekanik+Honda+Sedang+Bekerja" alt="Service Rutin Honda" class="featured-img" loading="lazy">
+                <span class="post-meta">10 Januari 2026</span>
+                <h2 class="featured-title">Pentingnya Service Rutin di Bengkel Resmi AHASS untuk Menjaga Garansi Mesin</h2>
+                <p class="post-excerpt">
+                    Melakukan perawatan berkala bukan hanya soal ganti oli. Mekanik AHASS akan melakukan pengecekan menyeluruh pada 7 poin utama motor Anda untuk memastikan performa tetap prima dan garansi tetap berlaku...
+                </p>
+                <a href="#" style="color:var(--primary-red); font-weight:600;">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <div class="blog-list">
+                
+                <article class="blog-card-horizontal">
+                    <img src="https://placehold.co/300x200/222/fff?text=Tips+Matic" alt="Tips Motor Matic" class="blog-thumb" loading="lazy">
+                    <div class="blog-info">
+                        <span class="post-meta">8 Januari 2026</span>
+                        <h3>5 Tips Merawat Motor Matic Injeksi Agar Tarikan Tetap Enteng</h3>
+                        <p>Bagi pengguna Honda BeAT dan Vario, perhatikan kebersihan CVT dan kualitas bahan bakar agar motor tidak gredek.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card-horizontal">
+                    <img src="https://placehold.co/300x200/222/fff?text=Touring+PCX" alt="Touring Honda PCX" class="blog-thumb" loading="lazy">
+                    <div class="blog-info">
+                        <span class="post-meta">5 Januari 2026</span>
+                        <h3>Serunya Touring Jarak Jauh Menggunakan Honda PCX 160: Nyaman Maksimal!</h3>
+                        <p>Pengalaman komunitas Honda PCX Indonesia menjajal rute lintas provinsi. Suspensi empuk dan bagasi luas jadi andalan.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card-horizontal">
+                    <img src="https://placehold.co/300x200/222/fff?text=Safety+Riding" alt="Safety Riding Honda" class="blog-thumb" loading="lazy">
+                    <div class="blog-info">
+                        <span class="post-meta">1 Januari 2026</span>
+                        <h3>Edukasi Safety Riding: Teknik Pengereman yang Benar Saat Hujan</h3>
+                        <p>Jangan asal tarik rem saat jalanan licin. Simak teknik pengereman kombinasi (Combi Brake System) yang aman.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card-horizontal">
+                    <img src="https://placehold.co/300x200/222/fff?text=Promo+Awal+Tahun" alt="Promo Honda 2026" class="blog-thumb" loading="lazy">
+                    <div class="blog-info">
+                        <span class="post-meta">28 Desember 2025</span>
+                        <h3>Promo Spesial Awal Tahun: Diskon Angsuran Hingga 3 Bulan untuk Seri Vario</h3>
+                        <p>Dapatkan penawaran terbatas khusus pembelian kredit di bulan Januari. Cek syarat dan ketentuannya di sini.</p>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+
+        <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">Artikel Populer</h3> <ul class="popular-list">
+                    <li class="popular-item">
+                        <span class="pop-number">1</span>
+                        <img src="https://placehold.co/80x60/eee/333?text=Oli" class="pop-thumb" alt="Ganti Oli">
+                        <div class="pop-text">
+                            <h4>Kapan Waktu Tepat Ganti Oli Gardan?</h4>
+                        </div>
+                    </li>
+
+                    <li class="popular-item">
+                        <span class="pop-number">2</span>
+                        <img src="https://placehold.co/80x60/eee/333?text=Rangka" class="pop-thumb" alt="Garansi Rangka">
+                        <div class="pop-text">
+                            <h4>Mengenal Garansi Rangka 5 Tahun Honda</h4>
+                        </div>
+                    </li>
+
+                    <li class="popular-item">
+                        <span class="pop-number">3</span>
+                        <img src="https://placehold.co/80x60/eee/333?text=SmartKey" class="pop-thumb" alt="Smart Key System">
+                        <div class="pop-text">
+                            <h4>Cara Mengatasi Remote Smart Key Tidak Konek</h4>
+                        </div>
+                    </li>
+
+                    <li class="popular-item">
+                        <span class="pop-number">4</span>
+                        <img src="https://placehold.co/80x60/eee/333?text=Ban" class="pop-thumb" alt="Tekanan Ban">
+                        <div class="pop-text">
+                            <h4>Daftar Tekanan Angin Ban Ideal Semua Tipe Motor</h4>
+                        </div>
+                    </li>
+
+                    <li class="popular-item">
+                        <span class="pop-number">5</span>
+                        <img src="https://placehold.co/80x60/eee/333?text=Stylo" class="pop-thumb" alt="Honda Stylo">
+                        <div class="pop-text">
+                            <h4>Review Jujur Pengguna Honda Stylo 160</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size:2rem; font-weight:800; margin-bottom:15px;">PUNYA PERTANYAAN LAIN?</h2>
+            <p style="margin-bottom:20px; font-size:1.1rem;">Tim kami siap membantu menjawab pertanyaan seputar produk dan layanan Honda.</p>
+            <a href="https://wa.me/6289563968080" class="btn-main" target="_blank">HUBUNGI SALES</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="img/logo.webp" alt="Footer Logo" style="height:35px; width:auto; margin-bottom:20px; filter: brightness(0) invert(1);">
+                    <p>Dealer Resmi & Bengkel AHASS Honda Purity Motor.</p>
+                </div>
+                <div>
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="pricelist.html">Pricelist</a></li>
+                        <li><a href="service.html">Layanan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>0895-6396-8080</li>
+                        <li>Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Sosial Media</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">© 2026 Purity Honda Dealer. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
