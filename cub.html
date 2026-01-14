@@ -45,6 +45,89 @@
     </script>
 
     <style>
+           /* Style Hamburger Menu (Garis Tiga) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent-black);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* --- GANTI BAGIAN @media (max-width: 768px) DENGAN INI --- */
+        @media (max-width: 768px) {
+            /* Navbar Mobile */
+            .hamburger { display: flex; } /* Munculkan tombol */
+            .nav-container { justify-content: space-between; position: relative; }
+            .logo-img { height: 40px; width: auto; } /* Fix logo gepeng */
+
+            .nav-links {
+                display: none; /* Sembunyi default */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                z-index: 1000;
+                border-top: 1px solid #eee;
+            }
+
+            /* Class Active (Dipicu JS) */
+            .nav-links.active { display: flex; }
+
+            .nav-links a { width: 100%; padding: 12px 0; border-bottom: 1px solid #f0f0f0; display: block; }
+            .cta-nav { width: 100%; text-align: center; margin-top: 15px; display: block; }
+
+            /* Fix Dropdown di Mobile */
+            .dropdown { width: 100%; display: block; height: auto; }
+            .dropdown-content { position: static; width: 100%; box-shadow: none; display: none; background: #fafafa; padding-left: 20px; }
+            .dropdown:hover .dropdown-content { display: block; }
+
+            /* Fix Layout Lainnya */
+            .hero { height: 400px; text-align: center; }
+            .hero h1 { font-size: 2rem; }
+            .cat-wrapper { gap: 15px; }
+            .cat-card { width: 45%; }
+            .features-grid, .product-grid, .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { text-align: center; }
+        }
+        @media (max-width: 768px) {
+    /* Pastikan z-index ada di sini */
+    .hamburger {
+        display: flex;
+        z-index: 1001; /* Agar tombol selalu di atas */
+        cursor: pointer;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; /* Muncul persis di bawah header */
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 1000; /* Agar menu menutupi konten di bawahnya */
+    }
+
+    /* Class ini wajib ada untuk memunculkan menu */
+    .nav-links.active {
+        display: flex !important; /* Paksa muncul */
+    }
+}
         /* --- 1. CSS VARIABLES --- */
         :root {
             --primary-red: #e60012;
@@ -421,16 +504,33 @@
 
 <body>
 
-    <header>
+<script>
+        // Fungsi untuk Membuka/Tutup Menu Mobile
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        }
+    </script>
+<header>
         <div class="top-bar">
             Buka Setiap Hari: 08:00 - 17:00 | Minggu & Hari Libur Tetap Buka
         </div>
         <nav class="container nav-container">
             <a href="index.html" class="logo" aria-label="Halaman Utama">
-                <img src="img/logo.webp" alt="Logo Purity Honda Dealer" class="logo-img" width="180" height="40">
+                <img src="img/logo.webp" alt="Logo Purity Honda Dealer" class="logo-img">
             </a>
 
-            <ul class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navMenu">
                 <li><a href="index.html">Beranda</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Produk Kami</a>
@@ -443,13 +543,9 @@
                     </ul>
                 </li>
                 <li><a href="pricelist.html">Daftar Harga</a></li>
-
                 <li><a href="service.html">Layanan</a></li>
-
                 <li><a href="blog.html">Blog</a></li>
-
-                <li><a href="https://wa.me/6289563968080?text=Halo%20saya%20tertarik%20dengan%20motor%20Honda"
-                        class="cta-nav" target="_blank">Hubungi Sales</a></li>
+                <li><a href="https://wa.me/6289563968080?text=Halo" class="cta-nav" target="_blank">Hubungi Sales</a></li>
             </ul>
         </nav>
     </header>
